@@ -24,4 +24,9 @@ public class PokemonService {
     public Pokemon pikachu(String pikachu){
         return pokemonRepository.pegarPokemon();
     }
+
+    public void addPokemon(Pokemon pokemon){
+        pokemonRepository.addPokemon(pokemon);
+    }
+
 }

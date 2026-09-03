@@ -3,10 +3,9 @@ package com.pokedex.controller;
 import com.pokedex.model.Pokemon;
 import com.pokedex.repository.PokemonRepository;
 import com.pokedex.service.PokemonService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/pokemon")
@@ -40,12 +39,17 @@ public class PokemonController {
 
     }
         @GetMapping("/pikachu/{tipo}")
-                public Pokemon pikachu(@PathVariable String tipo){
-            Pokemon pikachu = pokemonService.pikachu(tipo);
+                public List<Pokemon> mostrarPokemon(){
+             List<Pokemon> pikachu = pokemonService.addPokemon(Pokemon);
             return  pikachu;
         }
 
+@PostMapping ("oi/{pokemon}")
+    public void  addpokemon(@RequestBody Pokemon pokemon) {
+    pokemonService.addPokemon(pokemon);
+}
 
+}
 
 
 
