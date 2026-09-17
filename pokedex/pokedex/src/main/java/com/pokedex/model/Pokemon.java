@@ -1,6 +1,7 @@
 package com.pokedex.model;
 
 public class Pokemon {
+
     private String nome;
     private String tipo;
 
@@ -24,7 +25,5 @@ public class Pokemon {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-
-
-
 }
+
