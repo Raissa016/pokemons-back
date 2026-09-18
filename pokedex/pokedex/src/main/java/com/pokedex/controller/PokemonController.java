@@ -37,4 +37,9 @@ public class PokemonController {
         return pokemonService.getLista();
     }
 
+    @PutMapping("/update/{nome}")
+    public String updatePokemon(@PathVariable String nome, @RequestBody Pokemon pokemon) {
+        return pokemonService.updatePokemon(nome, pokemon);
+    }
+
 }

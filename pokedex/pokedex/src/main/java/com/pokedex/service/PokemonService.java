@@ -30,11 +30,14 @@ public class PokemonService {
         return pokemonRepository.addPokemon(pokemon);
     }
 
-
     public Pokemon buscarPokemon() {
 
         return pokemonRepository.buscarPokemon();
 
+    }
+
+    public String updatePokemon(String nome, Pokemon pokemon){
+        return pokemonRepository.updatePokemon(nome, pokemon);
     }
 
 }
